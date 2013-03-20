@@ -27,7 +27,8 @@ define(['jquery','underscore','backbone'],
                                 var val=data.photos.photo[i];
                                 var url='http://farm'+val.farm+'.staticflickr.com/'+val.server+'/'+val.id+'_'+val.secret+'_s.jpg';
                                 console.log(url);
-                                $(this.el).append('<img src="'+url+'" class="thumb"/>');
+                                console.log($(this.el));
+                                $('images').append('<img src="'+url+'" class="thumb"/>');
                                 //this.render(data.photos.photo[i]);
                             }
                         }
