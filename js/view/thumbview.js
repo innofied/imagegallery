@@ -16,7 +16,6 @@ define(['jquery','underscore','backbone','text!templates/addimage.html','imagemo
             initialize: function(){
                 _.bindAll(this, 'getImage','render','imageView'); // every function that uses 'this' as the current object should be in here
                 this.collection= imagecollection;
-                //console.log(this.collection);
                 this.getImage();
             },
             
@@ -42,7 +41,7 @@ define(['jquery','underscore','backbone','text!templates/addimage.html','imagemo
                         if(data.stat==='ok'){
                             for(var i=0; i<data.photos.photo.length;i++){
                                 var val=data.photos.photo[i];
-                                var imageurl='http://farm'+val.farm+'.staticflickr.com/'+val.server+'/'+val.id+'_'+val.secret+'_s.jpg',
+                                var imageurl='http://farm'+val.farm+'.staticflickr.com/'+val.server+'/'+val.id+'_'+val.secret+'_m.jpg',
                                 farm = val.farm,
                                 server=val.server,
                                 id=val.id,
@@ -55,16 +54,13 @@ define(['jquery','underscore','backbone','text!templates/addimage.html','imagemo
                                     id : id,
                                     secret : secret
                                 });
-                                //console.log(image.get("src"));
                                 this.collection.add(image.toJSON());
                                 /*
                  *Render function will be to append the images to the html.
                  */
                                 this.render(image);
                             }
-                            console.log(this.collection);
                         }
-        
                     }
                 }); 
             },
@@ -74,15 +70,16 @@ define(['jquery','underscore','backbone','text!templates/addimage.html','imagemo
              * Appends each image to the body of the html.
              */
             render: function(image){
-                this.$el.append(this.template(image.toJSON()));
+                $('.image-grid',this.el).append(this.template(image.toJSON()));
             },
+            /*
+             * Function that creates the expanded view of the image when it's clicked.
+             */
             imageView: function(e){
                 console.log(e);
-                console.log(e.target.id);
                 var details=new DetailView({
-                    //collection : this.collection,
-                    id:e.target.id
-                    });
+                    id:e.currentTarget.id
+                });
             }
         });
         return ThumbView;
