@@ -14,7 +14,11 @@ requirejs.config({
         jquery: '../lib/jquery-1.9.1',
         underscore : '../lib/underscore',
         backbone : '../lib/backbone',
-        thumbview : 'view/thumbview'
+        text: '../lib/text',
+        thumbview : 'view/thumbview',
+        detailview : 'view/detailview',
+        imagemodel : 'model/imagemodel',
+        imagecollection : 'collection/imagecollection'
     },
     shim : {
         jquery : {
