@@ -61,6 +61,7 @@ body{
     color: #333;
     overflow: scroll;
     overflow-x: hidden;
+    background-color: #000;
 }
 
 /********************************** End Of Base Rule *********************************/
@@ -81,17 +82,20 @@ body{
     margin: 10px 5px 0 5px;
 
 }
+
 /********************************* End of Layout Rule ********************************/
 
 /************************************** Module ***************************************/
+
 .image-grid li a img{
     display: block;
     position: relative;
     border: 1px solid #bebebe;
+    background-color: #fff;
 }
 .image-grid li .expand-container{
     position: absolute;
-    top: 225px;
+    top: 228px;
     left: 0;
     width: 100%;
     height: 480px;
@@ -100,58 +104,91 @@ body{
     overflow: hidden;
 }
 .image-grid li .expand-container .image-arrow{
-    background-image: url("../images/arrow-up.png");
+    background-image: url("../images/arrow.png");
     height: 20px;
     width: 46px;
     background-repeat: no-repeat;
     position: absolute;
     left: 100px;
+    top: -2px;
 }
-/*.image-grid li.expand-container > a::after {
-    top: 10px;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-bottom-color: #ddd;
-    border-width: 15px;
-    left: 50%;
-    margin: -20px 0 0 -15px;
-}*/
-
 .image-grid li .expand-container .inner-container{
     height: 100%;
-    padding: 30px 20px;
-    margin: 20px;
-    background: #acafb4;
+    padding: 22px 20px;
+    margin: 18px;
+    background: #939598;
 }
 .image-grid li .expand-container .inner-container .expanded-img,
 .image-grid li .expand-container .inner-container .img-details{
     float: left;
-    width: 50%;
     height: 100%;
     overflow: hidden;
     position: relative;
+    padding-top: 8px;
+}
+.image-grid li .expand-container .inner-container .expanded-img{
+    width: 50%;
+}
+.image-grid li .expand-container .inner-container .img-details{
+    width: 45%;
+    margin-left: 35px;
 }
 .image-grid li .expand-container .inner-container .expanded-img img{
     height: 400px;
     margin-left: 20px;
+    border: 1px solid rgb(136, 127, 127);
+    box-shadow: 0 0px 8px 2px rgb(90, 90, 90);
 }
-.image-grid li .expand-container .inner-container .img-details > h3{
+.image-grid li .expand-container .inner-container .img-details .title{
+    text-decoration: none;
+}
+.image-grid li .expand-container .inner-container .img-details .title h3{
     font-family: 'Wellfleet', cursive;
     font-size: 50px;
     font-weight: bold;
-    padding: 40px 0 40px 0;
-    color: rgb(97, 97, 97);
-
+    padding: 40px 0 10px 0;
+    color: rgb(77, 77, 77);
+    text-shadow: 2px 3px 0px rgba(66, 66, 66, 0.4);
+}
+.image-grid li .expand-container .inner-container .img-details .date{
+    color: rgb(226, 226, 226);
+    font-size: 15px;
+    margin-left: 3px;
 }
 .image-grid li .expand-container .inner-container .img-details p{
     font-size: 16px;
     line-height: 25px;
     font-weight: 300;
     color: rgb(32, 30, 30);
+    margin-top: 25px;
 }
-.image-grid li .expand-container .inner-container .img-details a{}
+.image-grid li .expand-container .inner-container .img-details .tag,
+.image-grid li .expand-container .inner-container .img-details .views{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    border: 3px solid rgb(61, 61, 61);
+    display: inline-block;
+    margin: 30px 0 0;
+    outline: none;
+}
+.image-grid li .expand-container .inner-container .img-details .views{
+    margin-left: 270px;
+}
+.image-grid li .expand-container .inner-container .img-details .tag::before,
+.image-grid li .expand-container .inner-container .img-details .views::before{
+    content: '\2192';
+    display: inline-block;
+    margin-right: 10px;
+}
+.image-grid li .expand-container .inner-container .img-details .tag:hover,
+.image-grid li .expand-container .inner-container .img-details .views:hover{
+    border-color: #000;
+    color: #000;
+}
+
 /********************************* End of Module Rule ********************************/
