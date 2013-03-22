@@ -16,72 +16,79 @@ and open the template in the editor.
     <body>
         <div class="main">
             <ul id="image-grid" class="image-grid">
-                <li style="  -webkit-transition: height 350ms ease; height: 700px;">
-                    <a><img src="images/thumbs/bear.png" alt="img01"/></a>
+                <li style="  -webkit-transition: height 350ms ease; height: 715px;">
+                    <a><img src="images/thumbs/tom.png" alt="img01"/></a>
                     <div class="expand-container">
                         <div class="image-arrow"></div>
                         <div class="inner-container">
                             <div class="expanded-img">
-                                <img src="images/bear.png"/>
+                                <img src="images/tom.jpg"/>
                             </div>
                             <div class="img-details">
-                                <a href="#" class="title"><h3>Bear Face</h3></a>
+                                <a href="#" class="title"><h3>Tom Cruise</h3></a>
                                 <span class="date">09-01-2013</span>
                                 <p>Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.</p>
-                                <a href="#" class="tag tooltip">Tags</a>
+                                <a href="#" class="tag tooltip" title="tags are shown here">Tags</a>
                                 <span class="views"><strong>16</strong> views</span>
+                                <div id="map" style="top: 20px;
+                                     margin-right: 114px;
+                                     margin-left: 100px;
+                                     height: 114px;
+                                     width: 370px;
+                                     border: 1px solid rgb(255, 255, 255);
+                                     box-shadow: 0 0 3px 1px #eee;"></div>
                             </div>
                         </div>
                     </div>
                 </li>
                 <li>
-                    <a><img src="images/thumbs/duck.png" alt="img02"/></a>
+                    <a><img src="images/thumbs/brad.png" alt="img02"/></a>
                 </li>
                 <li>
-                    <a><img src="images/thumbs/tux.png" alt="img03"/></a>
+                    <a><img src="images/thumbs/devid.png" alt="img03"/></a>
                 </li>
                 <li>
-                    <a><img src="images/thumbs/duck.png" alt="img04"/></a>
+                    <a><img src="images/thumbs/brad.png" alt="img04"/></a>
                 </li>
                 <li>
-                    <a><img src="images/thumbs/bear.png" alt="img05"/></a>
+                    <a><img src="images/thumbs/tom.png" alt="img05"/></a>
                 </li>
                 <li>
-                    <a><img src="images/thumbs/duck.png" alt="img06"/></a>
+                    <a><img src="images/thumbs/devid.png" alt="img06"/></a>
                 </li>
                 <li>
-                    <a><img src="images/thumbs/tux.png" alt="img07"/></a>
+                    <a><img src="images/thumbs/tom.png" alt="img07"/></a>
                 </li>
                 <li>
-                    <a><img src="images/thumbs/bear.png" alt="img08"/></a>
+                    <a><img src="images/thumbs/brad.png" alt="img08"/></a>
                 </li>
                 <li>
-                    <a><img src="images/thumbs/duck.png" alt="img09"/></a>
+                    <a><img src="images/thumbs/devid.png" alt="img09"/></a>
                 </li>
                 <li>
-                    <a><img src="images/thumbs/bear.png" alt="img08"/></a>
+                    <a><img src="images/thumbs/brad.png" alt="img08"/></a>
                 </li>
             </ul>
         </div>
-        
-<!--        <div class="tooltipster-base tooltipster-default tooltipster-fade tooltipster-fade-show" style="-webkit-transition: 350ms; -webkit-animation: 350ms; width: 445px; padding-left: 0px; padding-right: 0px; top: 468px; left: 707px;">
-           <div class="tooltipster-content">tags are shown here</div>
-           <div class="tooltipster-arrow-top tooltipster-arrow" style="left:-105.5px;">
-               <span class="tooltipster-arrow-border" style="margin-bottom: -3px; border-color: rgba(66, 66, 66, 0.47);"></span>
-               <span style="border-color:rgb(76, 76, 76);"></span>
-           </div>
-        </div>-->
 
+        <script type="text/javascript" src="lib/jquery-1.9.1.js"></script>
         <script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
         <script type="text/javascript" src="js/jquery.tooltipster.js"></script>
-        <script type="text/javascript" src="lib/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyCHzY4scknnpyeM3jTB0B-tDHxo4GCgdzw"></script>
+        <script type="text/javascript" src="js/jquery.gmap-1.1.0.js"></script>
+
         <script>
             $(document).ready(function() {
-                
-                $('.tooltip').tooltipster({
+                $(".tooltip").tooltipster({
                     animation: 'fade',
                     trigger: 'click'
                 });
+            });
+            
+            $(function() {
+                //                $("#map").gMap();
+                $("#map").gMap({ markers: [{ latitude: 47.660937,
+                            longitude: 9.569803 }] });
             });
         </script>
 
