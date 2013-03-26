@@ -67,15 +67,15 @@ body{
 /********************************** End Of Base Rule *********************************/
 
 /************************************** Layout ***************************************/
-.main{}
-.main .image-grid{
+
+.main .image-grid{     /* all thumbnail image container */
     list-style: none;
     text-align: center;
     margin: 0 auto;
     padding: 20px 0;
     width: 100%;
 }
-.main .image-grid li{
+.main .image-grid li{     /* thumnail images in a list */
     display: inline-block;
     height: 200px;
     vertical-align: top;
@@ -87,24 +87,23 @@ body{
 
 /************************************** Module ***************************************/
 
-.image-grid li a img{
+.image-grid li a img{     /* thumbnail images are placed in relative position for proper positioning */
     display: block;
     position: relative;
     border: 1px solid #bebebe;
     background-color: #fff;
 }
-.image-grid li .expand-container{
+.image-grid li .expand-container{    /* the container in which the expandede image and some details are placed */
     position: absolute;
     top: auto;
     left: 0;
     width: 100%;
     height: 480px;
     margin-top: 10px;
-    text-align: left;
     overflow: hidden;
 }
 .image-grid li .expand-container .image-arrow{
-    background-image: url("../images/arrow copy.png");
+    background-image: url("../images/arrow copy.png");    /* The arrow points which image is expanded */
     height: 20px;
     width: 46px;
     background-repeat: no-repeat;
@@ -112,7 +111,7 @@ body{
     left: 100px;
     top: 0;
 }
-.image-grid li .expand-container .inner-container{
+.image-grid li .expand-container .inner-container{   /* Inner container which holds the image and details part */
     height: 100%;
     padding: 22px 20px;
     margin: 18px;
@@ -121,32 +120,34 @@ body{
 .image-grid li .expand-container .inner-container .expanded-img,
 .image-grid li .expand-container .inner-container .img-details{
     float: left;
-    height: 100%;
+    height: 100%;                   /* the both image and details part contains the same bacic css part */
     overflow: hidden;
     position: relative;
     padding-top: 8px;
 }
 .image-grid li .expand-container .inner-container .expanded-img{
-    width: 50%;
+    width: 50%;                  /* the width of the image part is set to 50% for porper placement of the image */
+    text-align: center;          /* the image is placed at center at that width */
 }
 .image-grid li .expand-container .inner-container .img-details{
-    width: 45%;
-    padding-left: 35px;
+    width: 45%;      /* the details part width is set to 45% so that there are some gap between the image and details part */
+    text-align: left;
+    padding-left: 35px;    /* extra gap is set by padding left */
     height: 400px;
-    border-left: 1px solid rgb(173, 159, 159);
-    box-shadow: -1px 0px rgb(189, 184, 184);
+    border-left: 1px solid rgb(173, 159, 159);   /* the border-left property creates the devider between the two part */
+    box-shadow: -1px 0px rgb(189, 184, 184);     /* the shadow of the border creates the proper look and feel */
 }
 .image-grid li .expand-container .inner-container .expanded-img img{
-    height: 400px;
-    margin-left: 40px;
+    height: 400px;                /* only the height of the image is fixed so that the ratio of the image is maintained */
+    margin-left: -20px;
     border: 1px solid rgb(136, 127, 127);
     box-shadow: 0 0px 8px 2px rgb(90, 90, 90);
 }
 .image-grid li .expand-container .inner-container .img-details .title{
-    text-decoration: none;
+    text-decoration: none;        /* the titel of the image is set as a link so the default underline property is ommited by this property */
 }
 .image-grid li .expand-container .inner-container .img-details .title h3{
-    font-family: 'Wellfleet', cursive;
+    font-family: 'Wellfleet', cursive;    /* font-family is adopted by google font the link of this font is placed in the html */
     font-size: 50px;
     font-weight: bold;
     padding: 40px 0 10px 0;
@@ -174,7 +175,7 @@ body{
     text-transform: uppercase;
     letter-spacing: 2px;
     padding: 10px 20px;
-    border: 3px solid rgb(61, 61, 61);
+    border: 3px solid rgb(61, 61, 61);     /* the border arround the tag and views */
     display: inline-block;
     margin: 30px 0 0;
     outline: none;
@@ -184,13 +185,13 @@ body{
 }
 .image-grid li .expand-container .inner-container .img-details .tag::before,
 .image-grid li .expand-container .inner-container .img-details .views::before{
-    content: '\2192';
+    content: '\2192';     /* the arrow before the tag and views */
     display: inline-block;
     margin-right: 10px;
 }
 .image-grid li .expand-container .inner-container .img-details .tag:hover,
 .image-grid li .expand-container .inner-container .img-details .views:hover{
-    border-color: #000;
+    border-color: #000;     /* color changes during hover */
     color: #000;
 }
 

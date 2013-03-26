@@ -7,8 +7,9 @@ html {
 .tooltipster-default {
     border-radius: 5px;
     border: 2px solid #000;
-    background: rgba(66, 66, 66, 0.47);
+/*    background: rgba(66, 66, 66, 0.47);*/
     color: #fff;
+    background-color: #000;
 }
 
 /* Use this next selector to style things like font-size and line-height: */

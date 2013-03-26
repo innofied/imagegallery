@@ -11,18 +11,19 @@ and open the template in the editor.
         <link href="css/gallery.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" type="text/css" href="css/tooltipster.css" />
         <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+        <link href="css/lightbox.css" rel="stylesheet" type="text/css" />
 
     </head>
     <body>
         <div class="main">
             <ul id="image-grid" class="image-grid">
                 <li style="  -webkit-transition: height 350ms ease; height: 715px;">
-                    <a><img src="images/thumbs/tom.png" alt="img01"/></a>
+                    <a href="images/Tom.jpg" rel="lightbox"><img src="images/thumbs/tom.png" alt="img01"/></a>
                     <div class="expand-container">
                         <div class="image-arrow"></div>
                         <div class="inner-container">
                             <div class="expanded-img">
-                                <img src="images/tom.jpg"/>
+                                <img src="images/Tom.jpg"/>
                             </div>
                             <div class="img-details">
                                 <a href="#" class="title"><h3>Tom Cruise</h3></a>
@@ -42,54 +43,61 @@ and open the template in the editor.
                     </div>
                 </li>
                 <li>
-                    <a><img src="images/thumbs/brad.png" alt="img02"/></a>
+                    <a href="images/Brad.jpg" rel="lightbox"><img src="images/thumbs/brad.png" alt="img02"/></a>
                 </li>
                 <li>
-                    <a><img src="images/thumbs/devid.png" alt="img03"/></a>
+                    <a href="images/devid.jpg" rel="lightbox"><img src="images/thumbs/devid.png" alt="img03"/></a>
                 </li>
                 <li>
-                    <a><img src="images/thumbs/brad.png" alt="img04"/></a>
+                    <a href="images/Brad.jpg" rel="lightbox"><img src="images/thumbs/brad.png" alt="img04"/></a>
                 </li>
                 <li>
-                    <a><img src="images/thumbs/tom.png" alt="img05"/></a>
+                    <a href="images/Tom.jpg" rel="lightbox"><img src="images/thumbs/tom.png" alt="img05"/></a>
                 </li>
                 <li>
-                    <a><img src="images/thumbs/devid.png" alt="img06"/></a>
+                    <a href="images/devid.jpg" rel="lightbox"><img src="images/thumbs/devid.png" alt="img06"/></a>
                 </li>
                 <li>
-                    <a><img src="images/thumbs/tom.png" alt="img07"/></a>
+                    <a href="images/Tom.jpg" rel="lightbox"><img src="images/thumbs/tom.png" alt="img07"/></a>
                 </li>
                 <li>
-                    <a><img src="images/thumbs/brad.png" alt="img08"/></a>
+                    <a href="images/Brad.jpg" rel="lightbox"><img src="images/thumbs/brad.png" alt="img08"/></a>
                 </li>
                 <li>
-                    <a><img src="images/thumbs/devid.png" alt="img09"/></a>
+                    <a href="images/devid.jpg" rel="lightbox"><img src="images/thumbs/devid.png" alt="img09"/></a>
                 </li>
                 <li>
-                    <a><img src="images/thumbs/brad.png" alt="img08"/></a>
+                    <a href="images/Brad.jpg" rel="lightbox"><img src="images/thumbs/brad.png" alt="img08"/></a>
                 </li>
             </ul>
         </div>
 
         <script type="text/javascript" src="lib/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="js/lightbox.min.js"></script>
         <script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
         <script type="text/javascript" src="js/jquery.tooltipster.js"></script>
         <script type="text/javascript" src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyCHzY4scknnpyeM3jTB0B-tDHxo4GCgdzw"></script>
         <script type="text/javascript" src="js/jquery.gmap-1.1.0.js"></script>
+        
+        <script type="text/javascript" src="js/lightbox.js"></script>
 
         <script>
             $(document).ready(function() {
                 $(".tooltip").tooltipster({
-                    animation: 'fade',
+                    animation: 'grow',
                     trigger: 'click'
                 });
             });
             
             $(function() {
                 //                $("#map").gMap();
-                $("#map").gMap({ markers: [{ latitude: 47.660937,
-                            longitude: 9.569803 }] });
+                $("#map").gMap({ markers: [{ latitude: 45.739816,
+                            longitude: 8.231438 }] });
             });
+//            $(function(){
+//                $
+//                
+//            })
         </script>
 
     </body>
